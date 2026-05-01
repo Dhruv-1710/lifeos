@@ -26,7 +26,6 @@ def create_token(user_id: int) -> str:
 
 
 def decode_token(token: str):
-    """Returns user_id or None"""
     try:
         secret  = st.secrets["SECRET_KEY"]
         payload = jwt.decode(token, secret, algorithms=[ALGORITHM])
