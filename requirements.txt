@@ -4,5 +4,5 @@ pandas
 numpy
 scikit-learn
 joblib
-passlib[bcrypt]
+bcrypt
 python-jose[cryptography]
