@@ -437,8 +437,8 @@ if logs:
     df2 = pd.DataFrame(logs)
     df2["date"] = pd.to_datetime(df2["date"])
     last30 = df2.tail(30)[["date", "done"]].set_index("date")
-    st.caption("Last 30 days activity — darker = more work done")
-    st.dataframe(last30.style.background_gradient(cmap="viridis"))
+    st.caption("Last 30 days activity")
+    st.dataframe(last30, use_container_width=True)
 
 st.divider()
 
